@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 221244774}
   - component: {fileID: 221244773}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1094, y: 575}
+  m_AnchoredPosition: {x: 1013, y: 438}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221244773
@@ -1163,6 +1163,7 @@ GameObject:
   - component: {fileID: 1445103524}
   - component: {fileID: 1445103523}
   - component: {fileID: 1445103522}
+  - component: {fileID: 1445103526}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1257,6 +1258,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1445103526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445103521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ad7f99178e4e4044adf4d8c6653cef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuScreenManager
+  level1Button: {fileID: 1586280115}
+  level2Button: {fileID: 210309877}
+  level3Button: {fileID: 886297721}
+  backButton: {fileID: 221244773}
 --- !u!1 &1586280113
 GameObject:
   m_ObjectHideFlags: 0
