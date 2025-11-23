@@ -17,11 +17,11 @@ public class StartScreenManager : MonoBehaviour
     {
         string playerName = playerNameInput.text;
 
-        if (!string.IsNullOrEmpty(playerName))
+        if (!string.IsNullOrEmpty(playerName) && playerName != "Please enter your name")
         {
             Debug.Log($"Player Name: {playerName}");
             // Proceed to the next scene or start the game
-            // Example: UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(1);
         }
         else
         {
