@@ -13,7 +13,9 @@ using UnityEngine;
         private float speed = 10; // speed of the player
 
         private Vector2 startTouchPosition; // for mobile controls
-        private Vector2 endTouchPosition; // for mobile controls    
+        private Vector2 endTouchPosition; // for mobile controls
+                                          
+        public GameObject winText;
 
         private void Start()
         {
@@ -123,6 +125,7 @@ using UnityEngine;
             if (collision.CompareTag("Win")) // if the player enters the win zone
         {
             Debug.Log($"Win zone passed");
+            winText.SetActive(true); // show the win text
             //gameplayUI.LevelWin(); // call the LevelWin function in the GameplayUI script
             Destroy(gameObject, 3); // destroy the player after 3 seconds
         }

@@ -6,22 +6,20 @@ using TMPro; // Import TextMeshPro namespace
 // This is helpful for UI, since other things may need to be initialized before setting the UI
 [DefaultExecutionOrder(1000)]
 
-public class MenuScreenManager : MonoBehaviour
+public class LevelSceneManager : MonoBehaviour
 {
-    public Button level1Button, level2Button, level3Button;
-    public Button backButton;
-    public GameObject welcomeText;
+
 
     private string playerName;
+    public Button backButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Add listener to the button
         backButton.onClick.AddListener(OnBackButtonClicked); // Reusing the method name for simplicity
-        level1Button.onClick.AddListener(OnLevel1ButtonClicked); // Add listener for Level 1 button
         playerName = MainDataManager.Instance.playerName; // Get the player name from MainDataManager
-        welcomeText.GetComponent<TMP_Text>().text = "Welcome, " + playerName + "!"; // Set welcome text
+
 
     }
 
@@ -34,16 +32,8 @@ public class MenuScreenManager : MonoBehaviour
     private void OnBackButtonClicked()
     {
         // Load the start screen scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Assuming the start screen scene is at index 0
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1); // Assuming the start screen scene is at index 0
     }
-
-    private void OnLevel1ButtonClicked()
-    {
-        // Load the start screen scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2); // Assuming the Level 1 scene is at index 2
-    }
-
-
 
 
 }
