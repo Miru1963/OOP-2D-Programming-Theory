@@ -1049,7 +1049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: 627}
+  m_AnchoredPosition: {x: -847, y: 489}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &977215926
@@ -1411,6 +1411,7 @@ MonoBehaviour:
   level2Button: {fileID: 210309877}
   level3Button: {fileID: 886297721}
   backButton: {fileID: 221244773}
+  welcomeText: {fileID: 977215924}
 --- !u!1 &1586280113
 GameObject:
   m_ObjectHideFlags: 0
