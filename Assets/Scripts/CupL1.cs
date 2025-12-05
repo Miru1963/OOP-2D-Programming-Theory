@@ -15,31 +15,7 @@ public class CupL1 : Cup
     private new GameObject winCup; // Hide inherited field
 
 
-    /*
-    public CupL1(string farbe) // Constructor
-    {
-        this.farbe = farbe; // Assign the parameter to the field
-    }
-
-    public CupL1() { } // Default constructor
-
-    /*
-    public string Farbe // Property
-    {
-        get { return farbe; }
-        set { farbe = value; }
-    }
-    public string Name // Property
-    {
-        get { return name; }
-        set { name = value; }
-    }
-    public string Text // Property
-    {
-        get { return text; }
-        set { text = value; }
-    }
-    */
+    
 
     public override void DisplayText() // Override method
     {
