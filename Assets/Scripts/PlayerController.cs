@@ -8,21 +8,28 @@ using UnityEngine;
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private bool canMove; // to control when the player can move
-        //[SerializeField] private GameplayUI gameplayUI; // reference to the GameplayUI script
+                                               //[SerializeField] private GameplayUI gameplayUI; // reference to the GameplayUI script
+        
+
         private Rigidbody2D rb; // reference to the Rigidbody2D component
-        private float speed = 10; // speed of the player
+        private float speed = 15; // speed of the player
 
         private Vector2 startTouchPosition; // for mobile controls
         private Vector2 endTouchPosition; // for mobile controls
                                           
         public GameObject winText;
+        
+        public GameObject cupL1; // Reference to the CupL1 GameObject
+        public GameObject l1Cup; // Reference to the L1 Cup GameObject
 
-        private void Start()
+
+
+    private void Start()
         {
-            //gameplayUI = GameObject.Find("Gameplay").GetComponent<GameplayUI>(); // find the GameplayUI script in the scene
-
-          rb = GetComponent<Rigidbody2D>(); // get the Rigidbody2D component
-          canMove = true; // allow movement at the start
+            
+                rb = GetComponent<Rigidbody2D>(); // get the Rigidbody2D component
+              canMove = true; // allow movement at the start
+            
         }
 
         private void Update()
@@ -121,9 +128,26 @@ using UnityEngine;
     }
 
         private void OnTriggerEnter2D(Collider2D collision) // when the player enters a trigger collider
-    {
-            if (collision.CompareTag("Win")) // if the player enters the win zone
         {
+            
+
+        if (collision.CompareTag("Win")) // if the player enters the win zone
+        {
+            // Activate the l1Cup GameObject to display the big picture
+            CupL1 cupScript = cupL1.GetComponent<CupL1>();
+            if (cupScript != null)
+            {
+                GameObject l1Cup = cupScript.GetL1Cup();
+                if (l1Cup != null)
+                {
+                    l1Cup.SetActive(true);
+                    l1Cup.transform.localScale = new Vector3(10.0f, 10.0f, 10.0f); // Adjust the scale as needed
+                }
+                else
+                {
+                    Debug.LogWarning("l1Cup reference is not set.");
+                }
+            }
             Debug.Log($"Win zone passed");
             winText.SetActive(true); // show the win text
             //gameplayUI.LevelWin(); // call the LevelWin function in the GameplayUI script

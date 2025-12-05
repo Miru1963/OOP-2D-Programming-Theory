@@ -15,7 +15,7 @@ public class StartScreenManager : MonoBehaviour
     public TMP_InputField playerNameInput; // Change InputField to TMP_InputField
     public Button startButton, exitButton;
 
-    private Cup cup; // Example of using Cup class
+    
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class StartScreenManager : MonoBehaviour
         startButton.onClick.AddListener(OnStartButtonClicked); // Reusing the method name for simplicity
         exitButton.onClick.AddListener(OnExitButtonClicked); // Reusing the method name for simplicity
 
-        cup = new Cup("yellow"); // Example of creating a Cup instance
+        
 
         if (MainDataManager.Instance != null && !string.IsNullOrEmpty(MainDataManager.Instance.playerName)) // Check if player name exists
         {

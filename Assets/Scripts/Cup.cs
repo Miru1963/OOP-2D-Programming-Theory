@@ -1,15 +1,18 @@
 using UnityEngine;
+using TMPro; // Import TextMeshPro namespace
 
 public class Cup : MonoBehaviour
 {
-    private string farbe, name, text; // Private field
+    private string farbe, cupName, text; // Private field
+    [HideInInspector]
     [SerializeField]
-    private GameObject winText; // Serialized field
+    private TextMeshProUGUI cupText; // Hidden in Inspector
+    [HideInInspector]
     [SerializeField]
-    private GameObject winCup; // Serialized field
+    private GameObject winCup; // Hidden in Inspector
 
-   
 
+    /*
     public Cup(string farbe) // Constructor
     {
         this.farbe = farbe; // Assign the parameter to the field
@@ -17,16 +20,20 @@ public class Cup : MonoBehaviour
 
     public Cup() { } // Default constructor
 
-     public string Farbe // Property
+    */
+
+
+    public string Farbe // Property
      {
             get { return farbe; } // Getter
             set { farbe = value; } // Setter
-     }
+     }   
 
-   public string Name // Property
+
+   public string CupName // Property
     {
-        get { return name; } // Getter
-        set { name = value; } // Setter
+        get { return cupName; } // Getter
+        set { cupName = value; } // Setter
     }
     public string Text // Property
     {
@@ -38,9 +45,19 @@ public class Cup : MonoBehaviour
 
     public virtual void DisplayText() // Virtual method
     {
-        Debug.Log("Cup Text: " + text);
+        // Display the desired text when the cup is clicked
+        cupText.text = "You clicked the cup!";
+        Debug.Log("Cup Text: " + cupText.text);
     }
 
-
+    void OnMouseDown()
+    {
+        // Check if the cupText reference is set
+        if (cupText != null)
+        {
+            // Display the desired text when the cup is clicked
+            DisplayText();
+        }
+    }
 
 }
