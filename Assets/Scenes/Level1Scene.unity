@@ -432,6 +432,7 @@ RectTransform:
   - {fileID: 1520907020}
   - {fileID: 200200215}
   - {fileID: 1354672085}
+  - {fileID: 1309321992}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2499,7 +2500,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 376906013}
     m_Modifications:
     - target: {fileID: 2424810477186156486, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_Name
@@ -2523,15 +2524,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -506.5
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -285
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.47
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2539,7 +2540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2547,7 +2548,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2565,7 +2566,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4854699648730306415, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -2594,6 +2596,11 @@ MonoBehaviour:
   winCup: {fileID: 0}
   l1CupText: {fileID: 200200213}
   l1Cup: {fileID: 1309321990}
+--- !u!4 &1309321992 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3093261442923879804, guid: 27daa7c1e7fa5e74faa7de7e9d0bc1ec, type: 3}
+  m_PrefabInstance: {fileID: 1309321989}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1354672084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2878,7 +2885,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -225, y: -29}
+  m_AnchoredPosition: {x: -280.1, y: -29}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1520907021
@@ -2901,7 +2908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Miru\xB4s 2D Maze Game"
+  m_text: "Miru\xB4s 2D Maze Game Level 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2928,8 +2935,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2992,4 +2999,3 @@ SceneRoots:
   - {fileID: 608996414}
   - {fileID: 1190901199}
   - {fileID: 877065313}
-  - {fileID: 1309321989}
