@@ -43,7 +43,7 @@ public class CupL1 : Cup
 
     public GameObject GetL1Cup()
     {
-        return l1Cup;
+        return l1Cup; // Return the l1Cup GameObject
     }
 
 

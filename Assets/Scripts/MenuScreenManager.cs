@@ -20,16 +20,15 @@ public class MenuScreenManager : MonoBehaviour
         // Add listener to the button
         backButton.onClick.AddListener(OnBackButtonClicked); // Reusing the method name for simplicity
         level1Button.onClick.AddListener(OnLevel1ButtonClicked); // Add listener for Level 1 button
+        level2Button.onClick.AddListener(OnLevel2ButtonClicked); // Add listener for Level 2 button
+        level3Button.onClick.AddListener(OnLevel3ButtonClicked); // Add listener for Level 3 button
+
         playerName = MainDataManager.Instance.playerName; // Get the player name from MainDataManager
         welcomeText.GetComponent<TMP_Text>().text = "Welcome, " + playerName + "!"; // Set welcome text
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private void OnBackButtonClicked()
     {
@@ -39,11 +38,26 @@ public class MenuScreenManager : MonoBehaviour
 
     private void OnLevel1ButtonClicked()
     {
-        // Load the start screen scene
+        // Load the Level 1 scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(2); // Assuming the Level 1 scene is at index 2
+        MainDataManager.Instance.SetActiveLevelIndex(2); // Set the active level index to 2 for Level 1
     }
 
+    private void OnLevel2ButtonClicked()
+    {
+        // Load the Level 2 scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3); // Assuming the Level 2 scene is at index 3
+        MainDataManager.Instance.SetActiveLevelIndex(3); // Set the active level index to 3 for Level 2
+    }
 
+    private void OnLevel3ButtonClicked()
+    {
+        // Load the Level 3 scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(4); //   
+        MainDataManager.Instance.SetActiveLevelIndex(4);// Set the active level index to 4 for Level 3
+
+
+    }
 
 
 }

@@ -33,6 +33,8 @@ public class LevelSceneManager : MonoBehaviour
     {
         // Load the start screen scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(1); // Assuming the start screen scene is at index 0
+        MainDataManager.Instance.SetActiveLevelIndex(1); // Set the active level index to 1 start screen
+
     }
 
 
