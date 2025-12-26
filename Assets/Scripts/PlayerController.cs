@@ -36,9 +36,9 @@ using UnityEngine;
         {
             if (canMove) // only allow movement when canMove is true
             {
-                WASDAndArrowsMove(); // for keyboard controls
-                
-            }
+                WASDAndArrowsMove(); // ABSTRACTION
+
+        }
         }
 
         
@@ -50,8 +50,8 @@ using UnityEngine;
             //AudioManager.instance.PlayFirstSound();
     }
 
-        private void WASDAndArrowsMove()
-        {
+        private void WASDAndArrowsMove() // ABSTRACTION
+    {
             if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
             {
                 rb.linearVelocity = Vector2.up * speed;
@@ -176,7 +176,7 @@ using UnityEngine;
            
             //Debug.Log($"Win zone passed");
             winText.SetActive(true); // show the win text
-            //gameplayUI.LevelWin(); // call the LevelWin function in the GameplayUI script
+            
             Destroy(gameObject, 3); // destroy the player after 3 seconds
         }
         }

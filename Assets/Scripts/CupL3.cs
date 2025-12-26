@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro; // Import TextMeshPro namespace
 
 
-public class CupL3 : Cup
+public class CupL3 : Cup // INHERITANCE
 {
 
     [SerializeField]
@@ -16,7 +16,7 @@ public class CupL3 : Cup
     private new GameObject winCup; // Hide inherited field
 
 
-    public override void DisplayText() // Override method
+    public override void DisplayText() // POLYMORPHISM
     {
         if (l3CupText != null)
         {
@@ -40,7 +40,7 @@ public class CupL3 : Cup
 
     }
 
-    public GameObject GetL3Cup()
+    public GameObject GetL3Cup() //ENCAPSULATION
     {
         return l3Cup;
     }

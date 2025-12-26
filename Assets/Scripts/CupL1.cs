@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro; // Import TextMeshPro namespace
 
-public class CupL1 : Cup
+public class CupL1 : Cup // INHERITANCE
 {
     //private string farbe, name, text; // Private field
     [SerializeField]
@@ -17,7 +17,7 @@ public class CupL1 : Cup
 
     
 
-    public override void DisplayText() // Override method
+    public override void DisplayText() // POLYMORPHISM
     {
         if (l1CupText != null)
         {
@@ -41,7 +41,7 @@ public class CupL1 : Cup
         
     }
 
-    public GameObject GetL1Cup()
+    public GameObject GetL1Cup() //ENCAPSULATION
     {
         return l1Cup; // Return the l1Cup GameObject
     }

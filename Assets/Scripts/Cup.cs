@@ -23,19 +23,19 @@ public class Cup : MonoBehaviour
     */
 
 
-    public string Farbe // Property
-     {
+    public string Farbe // ENCAPSULATION
+    {
             get { return farbe; } // Getter
             set { farbe = value; } // Setter
      }   
 
 
-   public string CupName // Property
+   public string CupName // ENCAPSULATION
     {
         get { return cupName; } // Getter
         set { cupName = value; } // Setter
     }
-    public string Text // Property
+    public string Text // ENCAPSULATION
     {
         get { return text; } // Getter
         set { text = value; } // Setter
@@ -43,7 +43,7 @@ public class Cup : MonoBehaviour
 
    
 
-    public virtual void DisplayText() // Virtual method
+    public virtual void DisplayText() //POLYMORPHISM
     {
         // Display the desired text when the cup is clicked
         cupText.text = "You clicked the cup!";

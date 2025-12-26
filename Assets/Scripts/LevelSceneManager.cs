@@ -23,11 +23,7 @@ public class LevelSceneManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     private void OnBackButtonClicked()
     {

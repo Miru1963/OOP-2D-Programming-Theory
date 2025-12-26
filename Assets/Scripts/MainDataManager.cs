@@ -23,11 +23,13 @@ public class MainDataManager : MonoBehaviour
         }
     }
 
+    //ENCAPSULATION
     public int GetActiveLevelIndex() // Method to get the active level index
     {
         return activeLevelIndex; // Return the active level index
     }
 
+    //ENCAPSULATION
     public void SetActiveLevelIndex(int index) // Method to set the active level index
     {
         activeLevelIndex = index; // Set the active level index
